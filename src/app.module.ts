@@ -7,10 +7,13 @@ import { DbService } from './db.service'
 import { HdModule } from './hd/hd.module'
 import { TestModule } from './test/test.module'
 import { ConfigModule } from './config/config.module'
-import { ArticleModule } from './article/article.module';
+import { ArticleModule } from './article/article.module'
+import path from 'path'
+
+const configPath = path.resolve(__dirname, './configure')
 
 @Module({
-  imports: [UserModule, HdModule, TestModule, ConfigModule, ArticleModule],
+  imports: [UserModule, HdModule, TestModule, ConfigModule.forRoot({ path: configPath }), ArticleModule],
   controllers: [AppController],
   providers: [
     AppService,

@@ -1,7 +1,7 @@
 export default () => {
   return {
     app: {
-      name: 'test',
+      name: '这是一个nest app',
     },
   }
 }
