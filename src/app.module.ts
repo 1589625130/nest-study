@@ -4,11 +4,13 @@ import { UserModule } from './user/user.module'
 import { AppService } from './app.service'
 import { ServiceConfig } from './config'
 import { DbService } from './db.service'
-import { HdModule } from './hd/hd.module';
-import { TestModule } from './test/test.module';
+import { HdModule } from './hd/hd.module'
+import { TestModule } from './test/test.module'
+import { ConfigModule } from './config/config.module'
+import { ArticleModule } from './article/article.module';
 
 @Module({
-  imports: [UserModule, HdModule, TestModule],
+  imports: [UserModule, HdModule, TestModule, ConfigModule, ArticleModule],
   controllers: [AppController],
   providers: [
     AppService,
